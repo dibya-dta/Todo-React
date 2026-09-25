@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../context/context.jsx'
 
 export default function SessionStorage() {
     const [input, setInput] = useState("")
+    const {pageName,setPageName} = useContext(AuthContext)
 
     useEffect(() => {
       const res = sessionStorage.getItem('task') || ""
@@ -15,6 +17,9 @@ export default function SessionStorage() {
     }
   return (
     <div>
+
+    <h1>{pageName} with sessionStorage</h1>
+
       <form>
         <input type="text" placeholder='Enter your task' value={input} onChange={(e) => handleChange(e)} className='p-2 bg-gray-200'/>
         <button type='button'>submit</button>
