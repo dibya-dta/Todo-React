@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LocalStorage from './Component/LocalStorage.jsx'
 import SessionStorage from './Component/SessionStorage.jsx'
 import { AuthProvider } from './context/context.jsx'
+import BackendAndDatabase from './Component/BackendAndDatabase.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: 'SessionStorage',
     element: <SessionStorage/>
+  },
+  {
+    path: 'BackendAndDatabase',
+    element: <BackendAndDatabase/>
   }
 
 ])

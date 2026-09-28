@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 
 export default function App() {
 
-const buttons = ["LocalStorage","SessionStorage" ]
+const buttons = ["LocalStorage","SessionStorage", "BackendAndDatabase" ]
   return (
    <>
-   <h1>Todo with React</h1>
+   <h1 className="text-black">Todo with React</h1>
    <div className="flex flex-col gap-2">
     {
     buttons.map((item,idx)=>(

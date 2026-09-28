@@ -8,6 +8,7 @@ export default function SessionStorage() {
     useEffect(() => {
       const res = sessionStorage.getItem('task') || ""
       setInput(res)
+      console.log("SessionStorage loaded.")
     }, [])
     
 
